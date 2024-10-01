@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+  <RelativeLayout
+      android:id="@+id/rl_root"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/darkBlue">
+
+      <RelativeLayout
+          android:id="@+id/rlTop"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:visibility="visible">
+
+          <!-- TextView -->
+          <TextView
+              android:id="@+id/tvLogo"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Hi, Welcome"
+              android:layout_marginTop="12dp"
+              android:layout_marginStart="14dp"
+              android:textSize="30sp"
+              android:background="@color/white"/>
+
+          <de.hdodenhof.circleimageview.CircleImageView
+              android:id="@+id/circleImage"
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:layout_marginTop="14dp"
+              android:layout_marginEnd="16dp"
+              android:src="@drawable/humanmind"
+               />
+
+      </RelativeLayout>
+      
+      <RelativeLayout
+          android:id="@+id/rlSearch"
+          android:layout_width="match_parent"
+          android:layout_height="35dp"
+          android:layout_below="@+id/rlTop"
+          android:layout_marginStart="18dp"
+          android:layout_marginTop="30dp"
+          android:layout_marginEnd="18dp"
+          android:background="@drawable/search_background"
+          android:visibility="visible">
+
+          <ImageView
+              android:id="@+id/ivSearch"
+              android:layout_width="15dp"
+              android:layout_height="15dp"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:layout_marginStart="8dp"
+              android:backgroundTint="@color/antiqueWhite"
+              android:src="@drawable/ic_search"
+              android:visibility="visible" />
+
+          <EditText
+              android:id="@+id/searchInput"
+              fontPath="fonts/Montserrat-Medium.ttf"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginStart="8dp"
+              android:layout_marginEnd="6dp"
+              android:layout_toEndOf="@+id/ivSearch"
+              android:background="@color/transparent"
+              android:hint="Search Movies"
+              android:inputType="textPersonName"
+              android:maxLines="1"
+              android:singleLine="true"
+              android:textColor="@color/tt_background"
+              android:textColorHint="@color/tt_background"
+              android:textCursorDrawable="@null"
+              android:textSize="11sp"
+              tools:ignore="MissingPrefix" />
+
+      </RelativeLayout>
+
+      <TextView
+          android:id="@+id/tvCategories"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/rlSearch"
+          android:layout_marginTop="70dp"
+          android:layout_marginStart="18dp"
+          android:text="Categories"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          android:textColor="@android:color/white" />
+
+      <TextView
+          android:id="@+id/tvCategories1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/rlSearch"
+          android:layout_marginTop="70dp"
+          android:layout_marginStart="18dp"
+          android:text="See more"
+          android:layout_alignParentEnd="true"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          android:textColor="@android:color/background_light" />
+
+
+
+      <LinearLayout
+          android:id="@+id/cardContainer"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_marginTop="20dp"
+          android:layout_marginStart="10dp"
+          android:layout_marginEnd="10dp"
+          android:layout_below="@id/rlSearch">
+
+
+          <androidx.cardview.widget.CardView
+              android:id="@+id/cardView"
+              android:layout_width="60dp"
+              android:layout_height="60dp"
+              android:layout_below="@id/rlSearch"
+              android:layout_marginStart="18dp"
+              android:layout_marginEnd="18dp"
+              android:layout_marginTop="100dp"
+              android:layout_marginBottom="16dp"
+              app:cardElevation="4dp"
+              app:cardBackgroundColor="#161A37"
+              app:cardCornerRadius="16dp">
+
+              <TextView
+                  android:id="@+id/cardEmoji12"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="U+1F622"
+                  android:layout_marginTop="6dp"
+                  android:layout_marginStart="8dp"
+                  android:textSize="30sp"
+                  android:textColor="@android:color/white"/>
+
+
+          </androidx.cardview.widget.CardView>
+
+          <androidx.cardview.widget.CardView
+              android:id="@+id/cardView1"
+              android:layout_width="60dp"
+              android:layout_height="60dp"
+              android:layout_below="@id/rlSearch"
+              android:layout_marginStart="18dp"
+              android:layout_marginEnd="18dp"
+              android:layout_marginTop="100dp"
+              android:layout_marginBottom="16dp"
+              app:cardElevation="4dp"
+              app:cardBackgroundColor="#161A37"
+              app:cardCornerRadius="16dp">
+
+              <TextView
+                  android:id="@+id/cardEmoji1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="U+1F622"
+                  android:layout_marginTop="6dp"
+                  android:layout_marginStart="8dp"
+                  android:textSize="30sp"
+                  android:textColor="@android:color/white"/>
+
+          </androidx.cardview.widget.CardView>
+
+          <androidx.cardview.widget.CardView
+              android:id="@+id/cardView3"
+              android:layout_width="60dp"
+              android:layout_height="60dp"
+              android:layout_below="@id/rlSearch"
+              android:layout_marginStart="18dp"
+              android:layout_marginEnd="18dp"
+              android:layout_marginTop="100dp"
+              android:layout_marginBottom="16dp"
+              app:cardElevation="4dp"
+              app:cardBackgroundColor="#161A37"
+              app:cardCornerRadius="16dp">
+
+              <TextView
+                  android:id="@+id/cardEmoji13"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="😢"
+                  android:layout_marginTop="6dp"
+                  android:layout_marginStart="8dp"
+                  android:textSize="30sp"
+                  android:textColor="@android:color/white"/>
+
+          </androidx.cardview.widget.CardView>
+
+          <androidx.cardview.widget.CardView
+              android:id="@+id/cardView4"
+              android:layout_width="60dp"
+              android:layout_height="60dp"
+              android:layout_below="@id/rlSearch"
+              android:layout_marginStart="18dp"
+              android:layout_marginEnd="18dp"
+              android:layout_marginTop="100dp"
+              android:layout_marginBottom="16dp"
+              app:cardElevation="4dp"
+              app:cardBackgroundColor="#161A37"
+              app:cardCornerRadius="16dp">
+
+              <TextView
+                  android:id="@+id/cardEmoji14"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="😢"
+                  android:layout_marginTop="6dp"
+                  android:layout_marginStart="8dp"
+                  android:textSize="30sp"
+                  android:textColor="@android:color/white"/>
+
+          </androidx.cardview.widget.CardView>
+
+
+      </LinearLayout>
+  </RelativeLayout>
+</layout>
