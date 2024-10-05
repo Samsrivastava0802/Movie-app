@@ -10,20 +10,7 @@ import io.github.inflationx.viewpump.ViewPump
 class App : Application() {
     override fun onCreate() {
         super.onCreate()
-        initCalligraphyViewPump()
-    }
-    private fun initCalligraphyViewPump() {
-
-        ViewPump.init(
-            ViewPump.builder()
-                .addInterceptor(
-                    CalligraphyInterceptor(
-                        CalligraphyConfig.Builder()
-                            .setDefaultFontPath("fonts/Roboto-RobotoRegular.ttf").build()
-                    )
-                )
-                .build()
-        )
 
     }
+
 }
